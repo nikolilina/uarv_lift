@@ -1,4 +1,4 @@
-# Sistem za upravljanje liftom — SIL/HIL simulacija 🛗
+# Sistem za upravljanje liftom — SIL/HIL simulacija 
 
 **Fakultet tehničkih nauka, Novi Sad**
 Predmet: Upravljački algoritmi u realnom vremenu — Projektni zadatak br. 10
