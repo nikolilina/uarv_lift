@@ -33,6 +33,12 @@ Fizika lifta modelovana je kao sistem prvog reda, dok se pozicioniranje kabine o
 
 ---
 
+## ● Napomena o eksternim zavisnostima
+
+Projekat koristi Regular Timer Action Engine VI, biblioteku razvijenu u okviru predmeta Upravljački algoritmi u realnom vremenu (UARV) na Fakultetu tehničkih nauka, Univerzitet u Novom Sadu. Zbog autorskih prava univerzitetskog materijala, ova komponenta nije uključena u repozitorijum.
+
+---
+
 ## ● Pokretanje aplikacije
 
 1. Povezati cRIO i sbRIO kontrolere (fizičko povezivanje uređaja preko odgovarajućih kablova/mreže).
