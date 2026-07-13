@@ -1,7 +1,8 @@
 # Sistem za upravljanje liftom, SIL/HIL simulacija 
 
 **Fakultet tehničkih nauka, Novi Sad**
-Predmet: Upravljački algoritmi u realnom vremenu; Projektni zadatak br. 10
+
+Predmet: Upravljački algoritmi u realnom vremenu - Projektni zadatak br. 10
 
 ---
 
