@@ -1,13 +1,13 @@
-# Sistem za upravljanje liftom — SIL/HIL simulacija 
+# Sistem za upravljanje liftom, SIL/HIL simulacija 
 
 **Fakultet tehničkih nauka, Novi Sad**
-Predmet: Upravljački algoritmi u realnom vremenu — Projektni zadatak br. 10
+Predmet: Upravljački algoritmi u realnom vremenu; Projektni zadatak br. 10
 
 ---
 
 ## ● O projektu
 
-Aplikacija simulira upravljanje liftom u zgradi sa šest spratova, razvijena u LabVIEW okruženju kroz dve faze rada. U prvoj fazi (SIL — Software in the Loop) kompletan sistem — model lifta i upravljačka aplikacija — testiran je zajedno, softverski, na personalnom računaru. U drugoj fazi (HIL — Hardware in the Loop) sistem je raspoređen na dva fizički odvojena National Instruments kontrolera koji međusobno komuniciraju preko mreže: **cRIO**, na kom se izvršava upravljačka aplikacija, i **sbRIO**, na kom se izvršava model dinamike lifta.
+Aplikacija simulira upravljanje liftom u zgradi sa šest spratova, razvijena u LabVIEW okruženju kroz dve faze rada. U prvoj fazi (SIL - Software in the Loop) kompletan sistem: model lifta i upravljačka aplikacija, testiran je zajedno, softverski, na personalnom računaru. U drugoj fazi (HIL - Hardware in the Loop) sistem je raspoređen na dva fizički odvojena National Instruments kontrolera koji međusobno komuniciraju preko mreže: **cRIO**, na kom se izvršava upravljačka aplikacija, i **sbRIO**, na kom se izvršava model dinamike lifta.
 
 Fizika lifta modelovana je kao sistem prvog reda, dok se pozicioniranje kabine ostvaruje preko PI regulatora, ugrađenog u klasičan automat stanja.
 
@@ -15,21 +15,21 @@ Fizika lifta modelovana je kao sistem prvog reda, dok se pozicioniranje kabine o
 
 ## ● Hardver i softver
 
-- **cRIO** kontroler (National Instruments) — upravljačka aplikacija (automat stanja + regulator)
-- **sbRIO** kontroler (National Instruments) — model dinamike lifta
-- **LabVIEW** — razvojno okruženje
-- **Network-Published Shared Variables** — komunikacija između kontrolera i korisničkog interfejsa
+- **cRIO** kontroler (National Instruments) - upravljačka aplikacija (automat stanja + regulator)
+- **sbRIO** kontroler (National Instruments) - model dinamike lifta
+- **LabVIEW** - razvojno okruženje
+- **Network-Published Shared Variables** - komunikacija između kontrolera i korisničkog interfejsa
 
 ---
 
 ## ● Ključne funkcionalnosti
 
-- **Model dinamike lifta** — diskretizovana jednačina sistema prvog reda (Formula Node), sa parametrima podešenim tako da odziv liči na realno kretanje kabine.
-- **PI regulacija pozicije** — pojačanja Kp i Ki izvedena analitički, metodom postavljanja polova zatvorenog sistema.
-- **Automat sa četiri stanja** — Idle, Moving, DoorOpen, Shutdown, sa Guard Clause mehanizmom koji garantuje bezbedno zaustavljanje sistema na Stop komandu ili grešku.
-- **Raspodela na hardver** — upravljačka logika izvršava se na cRIO kontroleru, simulacija fizike lifta na sbRIO kontroleru, razmenjujući podatke isključivo preko mrežnih deljenih promenljivih.
-- **Korisnički panel** — poziv lifta sa svakog sprata (gore/dole) i izbor destinacije iznutra, sa blokiranjem dugmadi koja u datom trenutku nemaju smisla (npr. izbor sprata pre nego što je lift uopšte pozvan, ili izbor u pogrešnom smeru u odnosu na poziv).
-- **Vizuelna povratna informacija** — pokazivač trenutne pozicije, prikaz kretanja kroz spratove, LED signalizacija aktivnog stanja automata.
+- **Model dinamike lifta**: diskretizovana jednačina sistema prvog reda (Formula Node), sa parametrima podešenim tako da odziv liči na realno kretanje kabine.
+- **PI regulacija pozicije**: pojačanja Kp i Ki izvedena analitički, metodom postavljanja polova zatvorenog sistema.
+- **Automat sa četiri stanja**: Idle, Moving, DoorOpen, Shutdown, sa Guard Clause mehanizmom koji garantuje bezbedno zaustavljanje sistema na Stop komandu ili grešku.
+- **Raspodela na hardver**: upravljačka logika izvršava se na cRIO kontroleru, simulacija fizike lifta na sbRIO kontroleru, razmenjujući podatke isključivo preko mrežnih deljenih promenljivih.
+- **Korisnički panel**: poziv lifta sa svakog sprata (gore/dole) i izbor destinacije iznutra, sa blokiranjem dugmadi koja u datom trenutku nemaju smisla (npr. izbor sprata pre nego što je lift uopšte pozvan, ili izbor u pogrešnom smeru u odnosu na poziv).
+- **Vizuelna povratna informacija**: pokazivač trenutne pozicije, prikaz kretanja kroz spratove, LED signalizacija aktivnog stanja automata.
 
 ---
 
