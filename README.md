@@ -53,4 +53,4 @@ Projekat koristi Regular Timer Action Engine VI, biblioteku razvijenu u okviru p
 
 ## ● Deljene promenljive
 
-Komunikacija između cRIO, sbRIO i korisničkog panela ostvarena je isključivo preko mrežnih deljenih promenljivih, definisanih u zajedničkoj Shared Variable Library. Svaki VI pristupa potrebnoj promenljivoj tako što se ona direktno prevuče iz biblioteke na blok dijagram, nakon čega se, u zavisnosti od toga da li dati deo aplikacije treba da čita ili upisuje vrednost, čvor podesi u odgovarajući režim (Read/Write).
+Komunikacija između cRIO, sbRIO i korisničkog panela ostvarena je preko mrežnih deljenih promenljivih, definisanih u zajedničkoj Shared Variable Library. Svaki VI pristupa potrebnoj promenljivoj tako što se ona direktno prevuče iz biblioteke na blok dijagram, nakon čega se, u zavisnosti od toga da li dati deo aplikacije treba da čita ili upisuje vrednost, čvor podesi u odgovarajući režim (Read/Write).
