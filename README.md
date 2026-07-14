@@ -25,7 +25,7 @@ Fizika lifta modelovana je kao sistem prvog reda, dok se pozicioniranje kabine o
 
 ## ● Ključne funkcionalnosti
 
-- **Model dinamike lifta**: diskretizovana jednačina sistema prvog reda (Formula Node), sa parametrima podešenim tako da odziv liči na realno kretanje kabine.
+- **Model dinamike lifta**: diskretizovana jednačina sistema prvog reda, sa parametrima podešenim tako da odziv liči na realno kretanje kabine.
 - **PI regulacija pozicije**: pojačanja Kp i Ki izvedena analitički, metodom postavljanja polova zatvorenog sistema.
 - **Automat sa četiri stanja**: Idle, Moving, DoorOpen, Shutdown, sa Guard Clause mehanizmom koji garantuje bezbedno zaustavljanje sistema na Stop komandu ili grešku.
 - **Raspodela na hardver**: upravljačka logika izvršava se na cRIO kontroleru, simulacija fizike lifta na sbRIO kontroleru, razmenjujući podatke isključivo preko mrežnih deljenih promenljivih.
